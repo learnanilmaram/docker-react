@@ -3,7 +3,7 @@ sudo: required
 services:
   -docker
 before_install:
-  - docker build -t anilmaram/docker-react -f Dockerfile.dev .
+  - docker build -t anilmaram/docker-react .
 script:
   - docker run -e CI=true anilmaram/docker-react npm run test
 deploy:
